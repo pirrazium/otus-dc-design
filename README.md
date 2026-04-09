@@ -1,2 +1,2 @@
 # otus-dc-design
-repo for otus courses
+repo for otus courses homework 

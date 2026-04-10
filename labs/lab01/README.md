@@ -4,7 +4,7 @@
 1. Собрать схему CLOS, как на схеме 
 ### Реализовать схему
 
-![alt text](scheme.png)
+[scheme.png](scheme.png)
 
 ### Таблица адресов
 

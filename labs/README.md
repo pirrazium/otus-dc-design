@@ -6,6 +6,7 @@
  - [Lab05. Построение Overlay eBGP, L2 VNI](lab05/)
  - [Lab06. Построение Overlay eBGP, L3 VNI](lab06/)
  - [Lab07. VPC, EVPN Multihoming](/lab07/)
-
+ - [Lab08. Route-Type 5](/lab08/)
+ 
  ## Общие принципы
 [Глобальная табица ip адресов и логика распеределения тут](./design.md)

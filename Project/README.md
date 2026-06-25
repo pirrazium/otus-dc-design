@@ -4025,7 +4025,8 @@ AS Path Attributes: Or-ID - Originator ID, C-LST - Cluster List, LL Nexthop - Li
 
 ### Трассировка при отказе DC1-CORE
 
-Обычная трассировка 
+<details>
+  <summary> Обычная трассировка  </summary>
 
 ```
 MGMT_PC> trace 10.151.0.14 -P 1
@@ -4036,8 +4037,10 @@ trace to 10.151.0.14, 8 hops max (ICMP), press Ctrl+C to stop
  4   10.150.0.2   14.364 ms  12.678 ms  11.826 ms
  5   10.151.0.14   17.642 ms  16.097 ms  16.847 ms
 ```
+</details>
 
-Отказ DC1-CORE 
+<details>
+  <summary> Отказ DC1-CORE  </summary>
 
 ```
 MGMT_PC> tracer 10.151.0.14 -P 1
@@ -4049,6 +4052,7 @@ trace to 10.151.0.14, 8 hops max (ICMP), press Ctrl+C to stop
  5   10.151.0.14   28.029 ms  31.041 ms  28.894 ms
 
 ```
+</details>
 
 ### Финал : 
 

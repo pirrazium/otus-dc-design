@@ -905,6 +905,9 @@ router ospf 1
   <summary> DC1-LEAF1 </summary>
 
 ```
+link tracking group EVPN_CORE
+   recovery delay 300
+!
 hostname DC1-LEAF1
 !
 vlan 120
@@ -956,6 +959,7 @@ interface Ethernet1
    bfd interval 100 min-rx 100 multiplier 3
    ip ospf network point-to-point
    ip ospf area 0.0.0.0
+   link tracking group EVPN_CORE upstream
 !
 interface Ethernet2
    description DC1-SPINE2
@@ -965,14 +969,17 @@ interface Ethernet2
    bfd interval 100 min-rx 100 multiplier 3
    ip ospf network point-to-point
    ip ospf area 0.0.0.0
+   link tracking group EVPN_CORE upstream
 !
 interface Ethernet4
    description ESXI14
    channel-group 4 mode active
+   link tracking group EVPN_CORE downstream
 !
 interface Ethernet5
    description DC1-Legacy
    channel-group 5 mode active
+   link tracking group EVPN_CORE downstream
 !
 interface Loopback0
    ip address 10.200.1.2/32
@@ -1099,6 +1106,9 @@ router ospf 1
   <summary> DC1-LEAF2 </summary>
 
 ```
+link tracking group EVPN_CORE
+   recovery delay 300
+!
 hostname DC1-LEAF2
 !
 vlan 120
@@ -1150,6 +1160,7 @@ interface Ethernet1
    bfd interval 100 min-rx 100 multiplier 3
    ip ospf network point-to-point
    ip ospf area 0.0.0.0
+   link tracking group EVPN_CORE upstream
 !
 interface Ethernet2
    description DC1-SPINE2
@@ -1159,14 +1170,17 @@ interface Ethernet2
    bfd interval 100 min-rx 100 multiplier 3
    ip ospf network point-to-point
    ip ospf area 0.0.0.0
+   link tracking group EVPN_CORE upstream
 !
 interface Ethernet4
    description ESXI14
    channel-group 4 mode active
+   link tracking group EVPN_CORE downstream
 !
 interface Ethernet5
    description DC1-Legacy
    channel-group 5 mode active
+   link tracking group EVPN_CORE downstream
 !
 interface Loopback0
    ip address 10.200.1.3/32
@@ -1762,8 +1776,10 @@ router ospf 1
   <summary> DC2-LEAF1 </summary>
 
 ```
-hostname DC2-LEAF1
+link tracking group EVPN_CORE
+   recovery delay 300
 !
+hostname DC2-LEAF1
 !
 vlan 120
    name vMotion
@@ -1814,6 +1830,7 @@ interface Ethernet1
    bfd interval 100 min-rx 100 multiplier 3
    ip ospf network point-to-point
    ip ospf area 0.0.0.0
+   link tracking group EVPN_CORE upstream
 !
 interface Ethernet2
    description DC2-SPINE2
@@ -1823,14 +1840,17 @@ interface Ethernet2
    bfd interval 100 min-rx 100 multiplier 3
    ip ospf network point-to-point
    ip ospf area 0.0.0.0
+   link tracking group EVPN_CORE upstream
 !
 interface Ethernet4
    description ESXI17
    channel-group 4 mode active
+   link tracking group EVPN_CORE downstream
 !
 interface Ethernet5
    description ESXI16
    channel-group 5 mode active
+   link tracking group EVPN_CORE downstream
 !
 interface Loopback0
    ip address 10.200.2.2/32
@@ -1952,6 +1972,9 @@ router ospf 1
   <summary> DC2-LEAF2 </summary>
 
 ```
+link tracking group EVPN_CORE
+   recovery delay 300
+!
 hostname DC2-LEAF2
 !
 vlan 120
@@ -2003,6 +2026,7 @@ interface Ethernet1
    bfd interval 100 min-rx 100 multiplier 3
    ip ospf network point-to-point
    ip ospf area 0.0.0.0
+   link tracking group EVPN_CORE upstream
 !
 interface Ethernet2
    description DC2-SPINE2
@@ -2012,15 +2036,17 @@ interface Ethernet2
    bfd interval 100 min-rx 100 multiplier 3
    ip ospf network point-to-point
    ip ospf area 0.0.0.0
-!
+   link tracking group EVPN_CORE upstream
 !
 interface Ethernet4
    description ESXI17
    channel-group 4 mode active
+   link tracking group EVPN_CORE downstream
 !
 interface Ethernet5
    description ESXI16
    channel-group 5 mode active
+   link tracking group EVPN_CORE downstream
 !
 interface Loopback0
    ip address 10.200.2.3/32
